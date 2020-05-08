@@ -8,6 +8,10 @@ class ApplicationController < Sinatra::Base
     enable  :sessions
   end
   
+  get '/set/:name' do
+    session[:name] = params[:name]
+  end
+  
   get '/' do
     erb :homepage
   end
