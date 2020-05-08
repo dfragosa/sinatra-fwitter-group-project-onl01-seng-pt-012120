@@ -10,6 +10,10 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :homepage
   end
+  
+  get 'signup' do
+    erb :signup
+  end
 
 
 end
