@@ -5,6 +5,7 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
+    enable  :sessions
   end
   
   get '/' do
@@ -18,7 +19,7 @@ class ApplicationController < Sinatra::Base
   post '/signup' do
     erb :signup
     if params[:username] == settings.username && params[:password] == session[:admin] = true 
-      redirect to ('/app')
+      redirect to ('/new')
   end
     
 
