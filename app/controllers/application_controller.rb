@@ -5,9 +5,11 @@ class ApplicationController < Sinatra::Base
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
-    enable  :sessions
   end
-  
+   configure do 
+     enable :sessions
+   end
+   
   get '/set/:name' do
     session[:name] = params[:name]
   end
