@@ -8,7 +8,10 @@ class ApplicationController < Sinatra::Base
   end
    configure do 
      enable :sessions
+     set  :username, 'flat'
+     set  :password, 'iron'
    end
+  
    
   get '/set/:name' do
     session[:name] = params[:name]
