@@ -17,6 +17,8 @@ class ApplicationController < Sinatra::Base
   
   post '/signup' do
     erb :signup
+    if params[:username] == settings.username && params[:password] == session[:admin] = true 
+      redirect_to ()
   end
     
 
